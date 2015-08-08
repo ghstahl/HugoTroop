@@ -1,0 +1,98 @@
+<dom-module id="my-users">
+  <style>
+    :host {
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      h1.paper-font-display1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+  <template>
+
+  <iron-ajax
+      id="weatherAjax"
+     
+      params="{{weatherParams}}"
+      handle-as="json"
+      last-response="{{ajaxResponse}}"></iron-ajax>
+
+    <h1 class="paper-font-display1"><span>{{greeting}}</span></h1>
+    <span class="paper-font-body2">Update text to change the greeting.</span>
+    <!-- Listens for "input" event and sets greeting to <input>.value -->
+    <input class="paper-font-body2" value="{{greeting::input}}">
+    </br>
+    <paper-button raised on-click="weatherUpdate">Update</paper-button>
+    </br>
+     <b><span>{{ajaxResponse}}</b>
+  </template>
+
+  <script>
+    (function() {
+      Polymer({
+        is: 'my-users',
+
+        properties: {
+          baseURL:{type: String},
+           url: {
+
+                type: String
+                  },
+          greeting: {
+            type: String,
+            value: 'Welcome doggie!',
+            notify: true
+          },
+          weatherParams:{
+            type: Object,
+            value: function(){
+              return{
+                q: "New York",
+                cnt:"7"
+              }
+
+            },
+            notify:true
+          }
+        },
+        ready: function() {
+           
+          this.url="http://api.openweathermap.org/data/2.5/forecast/daily";
+          this.$.weatherAjax.auto = true;
+          this.$.weatherAjax.url = this.url;
+          this.$.weatherAjax.generateRequest();
+        } ,
+        handleResponse: function (request) {
+          console.log("response recieved");
+        },
+        weatherUpdate:function(){
+          console.log("update weather City")
+        
+          var qName = document.querySelector("input[is=iron-input]").bindValue;
+          console.log(qName);
+          this.weatherParams = {
+            q:qName,
+            cnt:"5"
+          }; 
+          this.$.weatherAjax.params = this.weatherParams;           
+        //  document.getElementById("weatherAjax").generateRequest();
+
+
+        },
+        ajaxParams2: function (part1, qry, maxResults1, key1) {
+          console.log(this.properties.city.value)
+          return {
+            part: part1,
+            q: this.properties.city.value,
+            maxResults: maxResults1,
+            key: key1
+          };
+        },
+
+      });
+    })();
+  </script>
+
+</dom-module>

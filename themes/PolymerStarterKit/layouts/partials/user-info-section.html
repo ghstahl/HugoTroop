@@ -1,0 +1,18 @@
+{{ $baseurl := .Site.BaseURL }}
+<section data-route="user-info">
+  <paper-material elevation="1">
+	<h2 class="paper-font-display2">
+	User:<span>{{"{{"}}params.name{{"}}"}}</span>
+	</h2>
+	<div>This is <span>{{"{{"}}params.name{{"}}"}}</span>'s section</div>
+	 <iron-ajax auto
+        url='{{$baseurl}}/users/{{"{{"}}params.name{{"}}"}}/'
+        params=''
+        handle-as="text"
+        last-response='{{"{{"}}ajaxResponse{{"}}"}}'></iron-ajax>
+	
+
+	{{"{{"}}ajaxResponse{{"}}"}}
+
+  </paper-material>
+</section>

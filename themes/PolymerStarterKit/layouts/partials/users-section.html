@@ -1,0 +1,20 @@
+ 
+ {{ $baseurl := .Site.BaseURL }}
+ <section data-route="users">
+  <paper-material elevation="1">
+  	
+  		
+	<my-users baseURL="{{$baseurl}}"></my-users>
+  	<h2 class="paper-font-display2">Users</h2>
+	<p>This is the users section</p>
+	<a href="/users/Rob">Rob</a>
+
+</br>
+	<paper-input is="iron-input" bind-value="{{"{{"}}myValue{{"}}"}}"></paper-input>
+	
+	</br>
+	<b>{{"{{"}}myValue{{"}}"}}</b>
+	</br>
+	<paper-button raised on-click="updateValue">Update</paper-button>
+  </paper-material>
+</section>

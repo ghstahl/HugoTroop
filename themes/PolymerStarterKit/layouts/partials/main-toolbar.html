@@ -1,0 +1,21 @@
+{{ $baseurl := .Site.BaseURL }}
+<!-- Main Toolbar -->
+<paper-toolbar id="mainToolbar" class="tall">
+  <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+  <span class="flex"></span>
+
+  <!-- Toolbar icons -->
+  <paper-icon-button icon="refresh"></paper-icon-button>
+  <paper-icon-button icon="search"></paper-icon-button>
+
+  <!-- Application name -->
+  <div class="middle middle-container center horizontal layout">
+	<div class="app-name">{{ .Title }}</div>
+  </div>
+
+  <!-- Application sub title -->
+  <div class="bottom bottom-container center horizontal layout">
+	<div class="bottom-title paper-font-subhead">{{ .Site.Params.description }}</div>
+  </div>
+
+</paper-toolbar>

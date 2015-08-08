@@ -1,0 +1,32 @@
+<dom-module id="content-loader"> 
+  <template>
+    <pre id="content"></pre>
+  </template>
+  <script>
+    
+    Polymer({
+      is: "content-loader",
+      properties: {
+        filePath: {
+          type: String,
+          observer: 'loadFile'
+        }
+      },
+
+      loadFile: function(path) {
+        if (this.filePath) {
+          console.log(this.filePath);
+          var link = this.importHref(this.filePath, 
+            function() {
+              this.$.content.appendChild(link.import.body);
+            },
+            function(){
+              console.log("error");
+            }
+          );
+        }
+      }
+    });
+
+  </script>
+</dom-module>
