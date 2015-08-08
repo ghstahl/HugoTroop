@@ -1,0 +1,286 @@
+/* Navigation
+--------------------------------------*/
+
+#header {
+	margin: 1.25% 0 0 5%;
+	list-style: none;
+	position: fixed;
+	}
+
+.nav {
+	height: 55px;
+	position: fixed;
+	width: 100%;
+	}	
+
+	
+.nav-links {
+	position: fixed;
+	text-decoration: none;
+	list-style: none;
+	top: 1.75%;
+	left: 75%;
+	display: block;
+	}
+	
+	
+.nav-links a {
+	margin: 0 0 0 0;
+	list-style: none;
+	text-decoration: none;
+	padding-bottom: 1%;
+	color: #000; 
+	/* Hover Color transition */
+	-o-transition:color .2s ease-out, background 1s ease-in;
+	-ms-transition:color .2s ease-out, background 1s ease-in;
+	-moz-transition:color .2s ease-out, background 1s ease-in;
+	-webkit-transition:color .2s ease-out, background 1s ease-in;
+	/* ...and now override with proper CSS property */
+	transition:color .2s ease-out, background 1s ease-in;
+	 }
+	 
+	 
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	}
+
+
+li {
+	display: inline;
+	margin-right: 25px;
+	}
+	
+	
+.nav-links a:hover {
+	color: #ff0067;
+	}
+	
+	
+/* Body
+--------------------------------------*/	
+	
+	
+#body {
+    padding-bottom:115px;   /* Height of the footer */
+	background-image: url('img/CookConnect-Logo_43x50.png'); /* fallback */
+	background-image: url('img/CookConnect-Logo_43x50.png'), -webkit-gradient(linear, left top, left bottom, from(#ffff00), to(#ff0067)); /* Saf4+, Chrome */
+	background-image: url('img/bubbles.png'), -webkit-linear-gradient(top, #ffff00, #ff0067); /* Chrome 10+, Saf5.1+ */
+	background-image: url('img/CookConnect-Logo_43x50.png'),    -moz-linear-gradient(top, #ffff00, #ff0067); /* FF3.6+ */
+	background-image: url('img/CookConnect-Logo_43x50.png'),     -ms-linear-gradient(top, #ffff00, #ff0067); /* IE10 */
+	background-image: url('img/CookConnect-Logo_43x50.png'),      -o-linear-gradient(top, #ffff00, #ff0067); /* Opera 11.10+ */
+	background-image: url('img/CookConnect-Logo_43x50.png'),         linear-gradient(top, #ffff00, #ff0067); /* W3C */
+	z-index: -2;
+	}
+	
+	
+#body 2 {
+	background-image: url('img/bubbles.ong') repeat fixed;
+	z-index: -1;
+	}
+
+
+#container {
+   min-height:100%;
+   position:relative;
+   }
+
+	
+	
+/* Gradient Background
+--------------------------------------	*/
+	
+
+/* Footer
+--------------------------------------*/	
+
+#footer {
+   position:absolute;
+   bottom:0px;
+   width:100%;
+   height:75px;   /* Height of the footer */
+   background:#1e1e1e;
+   }
+   
+   
+.social-media {
+	margin-left: 4.5%;
+	padding-top: 18px;
+	}
+	
+	
+.copyright {
+	float: right;
+	
+	left: 65%;
+	width: 20%;
+	}
+   
+   
+/* Typography
+--------------------------------------*/	
+   
+@font-face {
+    font-family: 'omnesbold';
+    src: url('omnes-bold-webfont.eot');
+    src: url('omnes-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('omnes-bold-webfont.woff') format('woff'),
+         url('omnes-bold-webfont.ttf') format('truetype'),
+         url('omnes-bold-webfont.svg#omnesbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	}
+
+
+@font-face {
+    font-family: 'omnesthin';
+    src: url('omnes-thin-webfont.eot');
+    src: url('omnes-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('omnes-thin-webfont.woff') format('woff'),
+         url('omnes-thin-webfont.ttf') format('truetype'),
+         url('omnes-thin-webfont.svg#omnesthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	}
+
+
+h1 {
+	font-family: "omnesthin", Helvetica, sans-serif;
+	font-size: 70px;
+	text-rendering: optimizeLegibility;
+	letter-spacing: -1px;
+	line-height: normal;
+	}
+
+
+li a {
+	font-family: "omnesbold", Helvetica, sans-serif;
+	font-size: 14px;
+	text-rendering: optimizeLegibility;
+	letter-spacing: .5px;
+	}
+
+nav a:hover {
+	color: #ff0067;
+	}
+
+
+h4 {
+	font-family: "omnesbold", Helvetica, sans-serif;
+	font-size: 14px;
+	text-rendering: optimizeLegibility;
+	color: #484848;
+	}
+	
+   
+   
+/* Intro/Sections
+--------------------------------------*/   
+   
+#intro-1 {
+	padding-top: 20%;
+	padding-bottom: 8%;
+	width: 800px;
+	margin: auto;
+	} 
+
+
+#intro-2 {
+	padding-top: 35%;
+	padding-bottom: 8%;
+	width: 800px;
+	margin: auto;
+	} 
+
+
+#intro-3 {
+	padding-top: 35%;
+	padding-bottom: 8%;
+	width: 800px;
+	margin: auto;
+	} 
+	
+	
+#intro-4 {
+	padding-top: 35%;
+	padding-bottom: 8%;
+	width: 800px;
+	margin: auto;
+	} 
+
+
+#intro-5 {
+	padding-top: 35%;
+	width: 800px;
+	margin: auto;
+	}
+
+   
+/* Highlight Color Selection
+--------------------------------------*/ 
+
+::selection {
+	background: #fff; /* Safari */
+	}
+	
+	
+::-moz-selection {
+	background: #fff; /* Firefox */
+	}
+
+
+::-webkit-selection {
+    background:#fff; /* Chrome */
+    }
+   
+   
+/* Sign Up Input
+--------------------------------------*/   
+
+
+.sign-up {
+	width: 800px;
+	margin-left: 10%;
+	padding-bottom: 9.25%;
+	margin: 0 auto;
+	}
+  
+  
+input[type="submit"] {
+	background-color:yellow;
+	border:2px solid #1e1e1e !important;
+	color:#000;
+	outline:0 !important;
+  	padding:9px 7px 9px 7px;
+  	width:15%;
+  	font-family: "omnesbold", Helvetica, sans-serif;
+  	text-transform: capitalize;
+  	font-size: 1.25em;
+  	letter-spacing: 1px;
+  	}
+  	 
+
+input[type="email"] {
+  	border:2px solid #1e1e1e !important;
+  	padding:10px 7px 10px 7px;
+  	width:265px;
+  	font-family: "omnesthin", Helvetica, sans-serif;
+  	text-transform: capitalize;
+  	font-size: 1.25em;
+  	letter-spacing: 1px;
+  	text-transform: capitalize;
+  	text-indent: 5px;
+  	}
+  	
+  	
+#register-email {
+	margin: auto;
+	}
+
+
+
+   
+   
+   
+   

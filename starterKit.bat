@@ -1,0 +1,1 @@
+hugo server -t=PolymerStarterKit -D -w
